@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserExMapper">
+    <resultMap id="BaseResultMap" type="com.zm.model.User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, name
+    </sql>
+
+    <insert id="insertUserExInfo" parameterType="com.zm.model.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user_info (name) values (#{name,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="getUserExById" resultMap="BaseResultMap" parameterType="int">
+        select
+          <include refid="Base_Column_List"/>
+        from user_info
+    </select>
+
+
+
+</mapper>
