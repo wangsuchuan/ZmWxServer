@@ -31,5 +31,15 @@ public class UserExService {
         return userEx.getId();
     }
 
+    /**
+     * 新增
+     * @return
+     */
+    public Long insertWeiXin(String name) {
+        User userEx = new User();
+        userEx.setName(name);
+        userExDao.insertUserExInfo(userEx);
+        return userEx.getId();
+    }
 
 }

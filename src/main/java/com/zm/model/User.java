@@ -5,9 +5,10 @@ import java.io.Serializable;
 /**
  * Created by wangchuan on 19/1/21.
  */
-public class User implements Serializable{
+//public class User implements Serializable{
+public class User{
 
-    private static final long serialVersionUID = -6703020646177098331L;
+//    private static final long serialVersionUID = -6703020646177098331L;
     private Long id;
 
     private String name;
