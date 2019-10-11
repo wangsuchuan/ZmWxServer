@@ -126,7 +126,7 @@ public class ApiController {
     @RequestMapping(value = "v2/tupian", method = RequestMethod.GET)
     public String testTupian() {
 
-        Font font = new Font("微软雅黑", Font.PLAIN, 150);
+        Font font = new Font("微软dddd雅黑", Font.PLAIN, 150);
         String inPath = "classpath:static/images/miaomiaonew.png";
         String outPath = "classpath:static/images/miaomiaonew.png";
 //        String outPath = "resources/static/images/miaomiao1.png";
